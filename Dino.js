@@ -32,7 +32,11 @@ class Dino {
 
   hasDied(obstacles) {
     for (let obstacle of obstacles) {
-      if (obstacle.x == this.pos.x && obstacle.y == this.pos.y) {
+      if (
+        this.pos.y + this.height >= obstacle.pos.y &&
+        this.pos.x + this.width >= obstacle.pos.x &&
+        this.pos.x <= obstacle.pos.x + obstacle.width
+      ) {
         return true;
       }
     }

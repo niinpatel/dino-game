@@ -7,6 +7,7 @@ class Obstacle {
   }
 
   show() {
+    fill(0);
     rect(this.pos.x, this.pos.y, this.width, this.height);
     this.pos.x -= this.velocity;
   }
